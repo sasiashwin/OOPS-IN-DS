@@ -46,4 +46,115 @@ m2.age = 56#Classvariables
 m1.view()
 m2.view()
 
+#getsetmethods
+
+class school:
+    def __init__(self,m1,m2,m3):
+        self.m1=m1
+        self.m2=m2
+        self.m3=m3
+    def avg(self):
+        avg=self.m1+self.m2+self.m3/3
+        print(avg)
+    def get(self):
+        print(self.m1)
+    def set_(self,val):
+        self.m2=val
+ms=school(23,87,67)
+ms1=school(28,99,44)
+ms.avg()
+ms1.avg()
+ms.get()
+ms1.get()
+ms1.set_(77)
+ms1.avg()
+
+#types of methods
+#instance method - normal (method/function)
+#class method - @classmethod
+#static method - @staticmethod
+
+class methods():
+    vm = "vasi"
+    def __init__(self,name):
+        self.name=name 
+    def student(self):
+        print(self.name)
+    @classmethod
+    def clsmethod(cls):
+        print(cls.vm)
+    @staticmethod
+    def static():
+        print("I am static")
+m1 = methods("sasi")
+m1.student()
+methods.clsmethod()
+methods.static()
+
+#Inheritance
+#Single Inheritance - A to B
+#Multilevel Inheritance - A to B to C
+#Multiple Inheritance - A , B , C(A,B)
+
+#Single
+class A:
+    def add(self,a,b):
+        res = a+b
+        print(res)
+    def sub(self,a,b):
+        res = abs(a-b)
+        print(res)
+class B(A):
+    def mul(self,a,b):
+        res = a*b
+        print(res)
+    def div(self,a,b):
+        res = a//b
+        print(res)
+m1 = A()
+m2 = B()
+m1.add(10,20)
+m2.mul(20,90)
+m2.add(15,30)
+
+#Multiple Inheritance
+class A:
+    def behaviour1(self):
+        print("class A1")
+    def behaviour2(self):
+        print("class A2")
+class B(A):
+    def behaviour3(self):
+        print("class B1")
+    def behaviour4(self):
+        print("class B2")
+class C(B):
+    def behaviour5(self):
+        print("class C1")
+    def behaviour6(self):
+        print("class C2")
+O1 = A()
+O2 = B()
+O3 = C()
+O1.behaviour2()
+O2.behaviour4()
+O3.behaviour1()
+
+
+#MultipleInheritance
+class A:
+    def a(self):
+        print("A")
+class B:
+    def b(self):
+        print("B")
+class C(A,B):
+    def c(self):
+        print("C")
+O1=A()
+O2=B()
+O3=C()
+O1.a()
+O2.b()
+O3.a()
 
