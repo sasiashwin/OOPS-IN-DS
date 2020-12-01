@@ -158,3 +158,62 @@ O1.a()
 O2.b()
 O3.a()
 
+#Superclass - Constructors in Inheritance
+
+#MultipleInheritance
+class A:
+    def __init__(self):
+        print("init in A")
+    def a(self):
+        print("A")
+class B(A):
+    def __init__(self):
+        super().__init__()
+        print("init in B")
+    def b(self):
+        print("B")
+a1=A()
+a2=B()
+
+#OperatorOverloading
+class operator:
+    def __init__(self,m1,m2):
+        self.m1 = m1
+        self.m2 = m2
+    def __add__(self,other):
+        m1 = self.m1 + other.m1
+        m2 = self.m2 + other.m2
+        m3 = operator(m1,m2)
+        return m3
+s1 = operator(10,20)
+s2 = operator(20,40)
+s3=s1+s2
+print(s3.m2)
+
+#MethodOverloading
+class overload:
+    def sum(self,a=None,b=None,c=None):
+        if(a!=None and b!=None and c!=None):
+            return a+b+c
+        elif(a!=None and b!=None):
+            return a+b
+        else:
+            return a
+s = overload()
+m = s.sum(10)
+print(m)
+
+#MethodOverriding
+class A:
+    def a(self):
+        print("Parent class")
+class B(A):
+    def a(self):
+        print("child class")
+m = B()
+m.a()
+
+
+
+
+
