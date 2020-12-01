@@ -1,0 +1,49 @@
+#Class & Objects
+
+class Demo:
+    def love(self,m):
+        print("Hai love")
+        print(m)
+m = "sasi"
+s = Demo()
+s.love(m)
+
+#Constructor Passing
+
+class Transport:
+    def __init__(self,val,val1):
+        self.val=val
+        self.val1=val1
+    def type(self):
+        print(self.val+" "+self.val1)
+m1 = Transport("Road","12km")
+m2 = Transport("air","36km")
+m1.type()
+m2.type()
+
+#Without Constructor
+
+class Transport:
+    def type(self,val,val1):
+        print(val+" "+val1)
+m1=Transport()
+m2=Transport()
+m1.type("sasi","18")
+m2.type("Kavin","19")
+
+#variablesPassing
+
+class Music:
+    def __init__(self,name,age):
+        self.name=name #instance valiables
+        self.age=age
+    def view(self):
+        print(self.name+" "+str(self.age))
+m1=Music("chithra",22)
+m2=Music("suchi",36)
+m1.name = "sasi"
+m2.age = 56#Classvariables
+m1.view()
+m2.view()
+
+
