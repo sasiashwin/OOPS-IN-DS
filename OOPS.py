@@ -213,7 +213,47 @@ class B(A):
 m = B()
 m.a()
 
+#3.Data Abstraction
+#abstract class and method
+from abc import ABC
+class method(ABC):
+    def abstract(self):
+        pass
+class A:
+    def abstract(self,a,b):
+        print(a+b)
+class B:
+    def abstract(self):
+        print("Hai")
+m1 = A()
+m1.abstract(10,29)
+m2 = B()
+m2.abstract()
 
+#4.Encapsulation
+#private method
+class Encapsulation:
+    def __init__(self):
+        self.__private()
+    def A(self):
+        print("normal method")
+    def __private(self):
+        print("privated function")
+m = Encapsulation()
+m.A()
+
+#private variable
+class Encapsulation:
+    __a=0 
+    __name=''
+    def __init__(self):
+        self.__a=10
+        self.__name="sasi"
+    def A(self):
+        print(self.__a)
+m = Encapsulation()
+m.__a=20
+m.A()
 
 
 
